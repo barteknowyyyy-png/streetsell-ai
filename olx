@@ -1,0 +1,60 @@
+# StreetSell MultiMarket – dokumentacja aplikacji
+
+## Cel aplikacji
+
+StreetSell MultiMarket to lokalna aplikacja desktopowa na system Windows, przeznaczona wyłącznie do zarządzania własnym firmowym kontem sprzedażowym.
+
+Celem aplikacji jest usprawnienie sprzedaży internetowej poprzez integrację platform Allegro i OLX oraz ograniczenie ręcznego wprowadzania danych produktowych.
+
+## Aktualne funkcjonalności – wersja 0.2
+
+- Lokalny panel zarządzania produktami.
+- Obsługa autoryzacji Allegro OAuth 2.0 Device Flow.
+- Import aktywnych ofert z Allegro.
+- Pobieranie tytułów, cen, opisów i adresów zdjęć produktów.
+- Lokalna baza danych produktów.
+- Edycja cen.
+- Eksport danych do CSV.
+
+Integracja z rzeczywistym kontem sprzedażowym znajduje się na etapie testów.
+
+## Planowane funkcjonalności
+
+- Przenoszenie własnych ofert z Allegro na OLX.
+- Synchronizacja cen i stanów magazynowych.
+- Automatyczne zamykanie ofert sprzedanych produktów.
+- Obsługa zamówień.
+- Wykrywanie duplikatów.
+- Obsługa Przesyłek OLX.
+- Blokowanie publikacji wymagających opłaty z góry.
+
+Publikacja na OLX pozostaje zablokowana do czasu zakończenia integracji oraz weryfikacji mechanizmów naliczania opłat.
+
+## Wymagane uprawnienia Allegro REST API
+
+- allegro:api:sale:offers:read – odczyt własnych ofert.
+- allegro:api:sale:offers:write – planowana synchronizacja dostępności i zamykanie ofert.
+- allegro:api:sale:settings:read – odczyt ustawień sprzedażowych.
+- allegro:api:orders:read – planowane wykrywanie sprzedaży i synchronizacja stanów magazynowych.
+
+## Bezpieczeństwo
+
+Aplikacja wykorzystuje oficjalne mechanizmy autoryzacji OAuth 2.0. Dane uwierzytelniające i tokeny dostępu nie są publikowane w repozytorium.
+
+Aplikacja nie wymaga udostępniania hasła do konta Allegro.
+
+## Przeznaczenie
+
+Aplikacja jest rozwijana wyłącznie na własne potrzeby przedsiębiorstwa. Nie jest usługą SaaS i nie jest przeznaczona do udostępniania innym sprzedawcom.
+
+## Technologie
+
+- Python
+- Tkinter
+- Allegro REST API
+- OAuth 2.0
+- OLX API – planowana integracja
+
+## Status projektu
+
+Wersja 0.2 – rozwój i testy integracji.
